@@ -1,0 +1,151 @@
+
+      /* Reset default styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      /* Body styles */
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        font-family: Arial, sans-serif;
+        background-color: #f1f1f1;
+      }
+
+      /* Password form styles */
+      #password-form {
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        width: 400px;
+      }
+
+      /* Label styles */
+      label {
+        display: block;
+        margin-bottom: 10px;
+        font-weight: bold;
+        color: #333;
+      }
+
+      /* Password input styles */
+      .password-container {
+        position: relative;
+        display: block;
+      }
+
+      .password-container input[type="password"],
+      .password-container input[type="text"] {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+        font-family: "Courier New", Courier, monospace; /* Unique font for the password input */
+        transition: border-color 0.3s ease;
+      }
+
+      .password-container input[type="password"]:focus,
+      .password-container input[type="text"]:focus {
+        outline: none;
+        border-color: #4caf50;
+      }
+
+      .password-container input[type="password"] {
+        font-family: "Courier New", Courier, monospace; /* Unique font */
+        -webkit-text-security: disc; /* For Chrome, Safari, and newer versions of Edge */
+        -moz-text-security: disc; /* For Firefox */
+      }
+
+      /* Toggle password icon styles */
+      .toggle-password {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+        color: #888;
+        transition: color 0.3s ease;
+      }
+
+      .toggle-password:hover {
+        color: #555;
+      }
+
+      /* Password requirements styles */
+      .password-requirements {
+        margin-top: 20px;
+      }
+
+      .password-requirements label {
+        display: flex;
+        align-items: center;
+        font-weight: normal;
+        margin-bottom: 10px;
+        color: #555;
+      }
+
+      .password-requirements input[type="checkbox"] {
+        margin-right: 10px;
+      }
+
+      /* Submit button styles */
+      button[type="submit"] {
+        display: block;
+        width: 100%;
+        padding: 12px;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+      }
+
+      button[type="submit"]:disabled {
+        background-color: #ccc;
+        cursor: not-allowed;
+      }
+
+      button[type="submit"]:not(:disabled):hover {
+        background-color: #45a049;
+      }
+
+      /* Password strength meter styles */
+      .password-strength progress {
+        width: 100%;
+        height: 10px;
+        appearance: none;
+        border: none;
+        border-radius: 5px;
+        overflow: hidden;
+      }
+
+      .password-strength progress::-webkit-progress-bar {
+        background-color: #ddd;
+        border-radius: 5px;
+      }
+
+      .password-strength progress::-webkit-progress-value {
+        border-radius: 5px;
+        transition: width 1.5s ease, background-color 0.2s ease;
+      }
+
+      .password-strength progress.weak::-webkit-progress-value {
+        background-color: #f44336; /* Red */
+      }
+
+      .password-strength progress.medium::-webkit-progress-value {
+        background-color: #ffc107; /* Yellow */
+      }
+
+      .password-strength progress.strong::-webkit-progress-value {
+        background-color: #4caf50; /* Green */
+      }
+    

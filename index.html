@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Validation with Toggle</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <form id="password-form">
+      <label for="password">Create Password:</label>
+      <div class="password-container">
+        <input type="password" id="password" name="password" />
+        <span class="toggle-password">
+          <i class="fas fa-eye"></i>
+        </span>
+      </div>
+      <div class="password-strength">
+        <label>Password Strength:</label>
+        <progress id="password-strength-meter" max="100" value="0"></progress>
+      </div>
+
+      <div class="password-requirements">
+        <label>
+          <input
+            type="checkbox"
+            id="special-char"
+            name="special-char"
+            disabled
+          />
+          Special character
+        </label>
+        <label>
+          <input type="checkbox" id="min-length" name="min-length" disabled />
+          Minimum length (8 characters)
+        </label>
+        <label>
+          <input type="checkbox" id="number" name="number" disabled />
+          Number
+        </label>
+      </div>
+      <button type="submit" disabled>Create</button>
+    </form>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
